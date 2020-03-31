@@ -27,7 +27,7 @@ public class Chapter_1_Questions {
         System.out.println("---------------------------");
         System.out.println("One Way: ");
         String w5 = "pale";
-        String w6 = "bake";
+        String w6 = "ple";
         System.out.println(OneWay(w5, w6));
 
     }
@@ -102,52 +102,52 @@ public class Chapter_1_Questions {
             return false;
         }
 
-//        HashMap<Character, Character> v1hashMap = new HashMap<>();
-//        for(int i = 0; i < w1.length(); i++){
-//            v1hashMap.put(w1.charAt(i), w1.charAt(i));
-//        }
-//
-//        HashMap<Character, Character> v2hashMap = new HashMap<>();
-//        for(int i = 0; i < w2.length(); i++){
-//            v2hashMap.put(w2.charAt(i), w2.charAt(i));
-//        }
-//
-//        for(char k: v1hashMap.keySet()){
-//            for (char c: v2hashMap.keySet()){
-//                if(v1hashMap.get(k) != v2hashMap.get(c)){
-//                    return false;
-//                }
-//            }
-//        }
+        HashMap<Character, Character> v1hashMap = new HashMap<>();
+        for(int i = 0; i < w1.length(); i++){
+            v1hashMap.put(w1.charAt(i), w1.charAt(i));
+        }
 
-        int editCount = 0;
-        int i = 0;
-        int j = 0;
-        while(i < v1 && j < v2){
-            if(w1.charAt(i) != w2.charAt(j)){
-                if(editCount == 1){
+        HashMap<Character, Character> v2hashMap = new HashMap<>();
+        for(int i = 0; i < w2.length(); i++){
+            v2hashMap.put(w2.charAt(i), w2.charAt(i));
+        }
+        
+        for(char k: v1hashMap.keySet()){
+            for (char c: v2hashMap.keySet()){
+                if(v1hashMap.get(k) != v2hashMap.get(c)){
                     return false;
                 }
-
-                if(v1 > v2){
-                    i++;
-                } else if (v1 < v2) {
-                    j++;
-                } else {
-                    i++;
-                    j++;
-                }
-
-                editCount++;
-            } else {
-                i++;
-                j++;
             }
         }
 
-        if(i < v1 || j < v2){
-            editCount++;
-        }
+//        int editCount = 0;
+//        int i = 0;
+//        int j = 0;
+//        while(i < v1 && j < v2){
+//            if(w1.charAt(i) != w2.charAt(j)){
+//                if(editCount == 1){
+//                    return false;
+//                }
+//
+//                if(v1 > v2){
+//                    i++;
+//                } else if (v1 < v2) {
+//                    j++;
+//                } else {
+//                    i++;
+//                    j++;
+//                }
+//
+//                editCount++;
+//            } else {
+//                i++;
+//                j++;
+//            }
+//        }
+//
+//        if(i < v1 || j < v2){
+//            editCount++;
+//        }
 
         return true;
     }
