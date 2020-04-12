@@ -6,19 +6,19 @@ public class moveZeroes {
         moveZeroes(nums);
     }
     public static void moveZeroes(int[] nums){
-        int curr;
-        int prev;
-        for(int i = 0; i < nums.length;){
-            for(int j = i + 1; j < nums.length;){
-                if(nums[i] == 0){
-                    prev = nums[i];
-                    curr = nums[j];
-                    nums[i] = curr;
-                    nums[j] = prev;
-                    i++;
-                    j++;
-                }
-            }
-        }
+//        int curr;
+//        int prev;
+//        for(int i = 0; i < nums.length;){
+//            for(int j = i + 1; j < nums.length;){
+//                if(nums[i] == 0){
+//                    prev = nums[i];
+//                    curr = nums[j];
+//                    nums[i] = curr;
+//                    nums[j] = prev;
+//                    i++;
+//                    j++;
+//                }
+//            }
+//        }
     }
 }
